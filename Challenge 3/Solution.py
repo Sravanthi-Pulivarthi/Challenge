@@ -1,9 +1,10 @@
 def extract(objects, keys):
     l = keys.split('/')
+    print(l)
     temp = objects
     for a in l :
-        temp = temp[temp.find(a)+3:]
-    out = temp[1]
+        temp = temp[temp.find(a)+len(a)+2:-1]
+    out = temp[1:-1]
     print(out)
 
 
